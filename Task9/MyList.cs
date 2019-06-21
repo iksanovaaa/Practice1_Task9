@@ -50,7 +50,7 @@ namespace Task9
         //рекурсивный метод подсчета количества элементов в списке
         public void Count1()
         {
-            int count = 1;
+            int count = 0;
             Node head = beg;
             this.Counter1(count, head);
         }
@@ -62,6 +62,7 @@ namespace Task9
                 Node temp = head;
                 if (temp.next == null)
                 {
+                    count++;
                     Console.WriteLine("Количество элементов в списке (рекурсивный метод): " + count);
                 }
                 else
@@ -71,6 +72,7 @@ namespace Task9
                     Counter1(count, temp);
                 }                
             }
+            else Console.WriteLine("Количество элементов в списке (рекурсивный метод): " + count);
         }
 
         //нерекурсивный метод подсчета количества элементов в списке

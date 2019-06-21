@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +15,24 @@ namespace Task9
             bool end = false;
             do
             {
-                int n = rnd.Next(0, 20);
+                int n = rnd.Next(0, 100);
                 Console.WriteLine("Количество элементов в списке: " + n);
                 MyList l1 = new MyList();
                 l1.Create(n, 1);
                 l1.Show();
+                TimeSpan time;
+                Stopwatch sw = new Stopwatch();
+                sw.Start();
                 l1.Count1();
+                sw.Stop();
+                time = sw.Elapsed;
+                Console.WriteLine("Время подсчета рекурсивным методом: " + time.ToString());
+                sw = new Stopwatch();
+                sw.Start();
                 l1.Count2();
+                sw.Stop();
+                time = sw.Elapsed;
+                Console.WriteLine("Время подсчета нерекурсивным методом: " + time.ToString());
                 end = CheckKey();
             } while (!end);
         }
