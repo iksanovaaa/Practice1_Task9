@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task9
 {
-    class MyList
+    public class MyList
     {
         private Node beg;
         private Node tail;
@@ -16,7 +12,7 @@ namespace Task9
         {
             get; private set;
         }
-
+        
         //добавление элементов в список
         public Node Add(int el)
         {

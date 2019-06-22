@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task9
 {
-    class Program
+    public class Program
     {
-        static Random rnd = new Random();
-        static void Main(string[] args)
+        public static Random rnd = new Random();
+        public static void Main(string[] args)
         {
             bool end = false;
             do
